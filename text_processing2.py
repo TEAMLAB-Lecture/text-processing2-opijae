@@ -70,6 +70,8 @@ def to_camel_case(underscore_str):
     """
     flag=False
     camelcase_str = ''
+    if '_' not in underscore_str:
+        return underscore_str
     for s in underscore_str:
         if s=='_':
             flag=True
