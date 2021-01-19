@@ -70,7 +70,6 @@ def to_camel_case(underscore_str):
     """
     flag=False
     camelcase_str = ''
-    underscore_str=underscore_str.lower()
     for s in underscore_str:
         if s=='_':
             flag=True
@@ -79,7 +78,7 @@ def to_camel_case(underscore_str):
                 flag=False
                 camelcase_str+=s.upper()
             else:
-                camelcase_str+=s
+                camelcase_str+=s.lower()
     if len(camelcase_str)>0:
         camelcase_str=camelcase_str[0].lower() + camelcase_str[1:]
     return camelcase_str
